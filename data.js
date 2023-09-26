@@ -8,6 +8,7 @@ let projects=[
     {name:"PDFMerger", des:"PDF Merger using PyPDF2.",type:"py"},
     {name:"KBC", des:"A quiz programm with scoreboard and a better readable code.",type:"py"},
     {name:"StonePaperScissor", des:"A simple game battle of a human and a computer.",type:"py"},
+    {name:"NiceWeekend", des:"A nice weekend planner.",type:""},
 
 
 ]
