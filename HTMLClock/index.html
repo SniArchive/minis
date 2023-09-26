@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>now clock</title>
+
+    <!-- styles -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/2.3.0/css/reset.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap"rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+
+</head>
+<body id="bg">
+    <div id="fs">
+       <section id="margintop">
+        <div id="text">
+            <h1 class="text">Current Time:</h1>
+            <h2 class="text" id="time">2:30 IST</h2>
+        </div>
+        <h6>made with <i class="fa-solid fa-file-code"></i> by <a href="https://snipc.fr.to">snipc</a></h6>
+    </section> 
+
+</div>
+</body>
+
+<!-- styles -->
+<style>
+    #fs{
+        display: flex;
+        justify-content: center;
+    }
+    .text{
+        color: white;
+        font-family: 'DM Sans', sans-serif;
+    }
+    h1{
+        font-size: 80px;
+    }
+    #time{
+        font-size: 50px;
+        text-align: center;
+    }
+    #margintop{
+        margin-top: 200px;
+    }
+    body{
+        background:url(https://wallpapers.com/images/high/dark-anime-scenery-0mp7ipuarvle7vwr.webp);
+        background-repeat: no-repeat;
+        background-size: 1500px;
+        backdrop-filter: blur(10px);
+        height: 100vh;
+    }
+    h6{
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        font-size: 18px;
+        color: rgb(199, 177, 177);
+        font-family: 'Poppins', sans-serif;
+    }
+    a{
+        color: rgb(199, 177, 177);
+    }
+    .code{
+        background-image: url(https://cdn-icons-png.flaticon.com/256/11507/11507454.png);
+    }
+
+</style>
+<script>
+    text=document.getElementById('time')
+    setInterval(() => {
+        date= new Date
+        text.innerHTML=  moment().format('LT');
+        
+    }, 1000);
+    moment().format("MMM Do YY"); 
+
+</script>
+<!-- scripts and js -->
+<link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+<script src="https://cdn.jsdelivr.net/npm/kursor"></script>
+ <script src="https://sn.ix.tc/docs/kursor.js"></script>
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+<script src="https://kit.fontawesome.com/0f40596886.js" crossorigin="anonymous"></script>
+</html>
