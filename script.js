@@ -1,4 +1,4 @@
-import {projects} from "/data.js";
+import {projects} from "./data.js";
 let list= document.getElementById('list')
 
 
@@ -6,17 +6,17 @@ let list= document.getElementById('list')
 projects.forEach(element => {
     var pname= element.name
     var des= element.des
-    var link= 'https://realsnipc.github.io/minisnips/'+element.name
+    var link= 'https://realsnipc.github.io/minis/'+element.name
     var img= "https://image.thum.io/get/width/1203/crop/600/http://realsnipc.github.io/minisnips/"+element.name
     if (element.type=="py"){
-        var link= 'https://github.com/realsnipc/minisnips/tree/main/'+element.name
+        var link= 'https://github.com/realsnipc/minis/tree/main/'+element.name
         var img= 'https://www.activestate.com/wp-content/uploads/2021/12/python-coding-mistakes.jpg'
     }
     let template= `                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
 
     <!-- this is start -->
     <div class="rounded-lg h-64 overflow-hidden">
-        <img alt="content" class="object-cover object-center h-full w-full"
+        <img alt="content" class="object-cover object-center h-full w-full  border-4 rounded"
             src="${img}">
     </div>
     <h2 class="text-xl font-medium title-font text-gray-900 mt-5">${pname}</h2>
