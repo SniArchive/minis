@@ -1,8 +1,21 @@
 import {projects} from "./data.js";
 let list= document.getElementById('list')
+import splt from "https://cdn.skypack.dev/spltjs@1.0.8";
+import anime from "https://cdn.skypack.dev/animejs@3.2.1";
 
-
-
+splt({
+    reveal: true
+  });
+  
+  anime({
+    targets: '.reveal',
+    translateY: [0, 20],
+    direction: 'alternate',
+    loop: 1,
+    delay: anime.stagger(25),
+    easing: 'cubicBezier(.71,-0.77,.43,1.67)'
+  });
+  
 projects.forEach(element => {
     var pname= element.name
     var des= element.des
@@ -11,6 +24,10 @@ projects.forEach(element => {
     if (element.type=="py"){
         var link= 'https://github.com/realsnipc/minis/tree/main/'+element.name
         var img= 'https://www.activestate.com/wp-content/uploads/2021/12/python-coding-mistakes.jpg'
+    }
+    else if (element.type=="react"){
+        var link= 'https://github.com/realsnipc/minis/tree/main/'+element.name
+        var img= 'https://c4.wallpaperflare.com/wallpaper/294/834/442/reactjs-facebook-javascript-minimalism-wallpaper-preview.jpg'
     }
     let template= `                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
 
